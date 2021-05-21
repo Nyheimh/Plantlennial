@@ -1,0 +1,2 @@
+class Monstera < ApplicationRecord
+end

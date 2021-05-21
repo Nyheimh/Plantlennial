@@ -1,0 +1,2 @@
+class Potho < ApplicationRecord
+end
