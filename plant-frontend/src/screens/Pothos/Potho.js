@@ -1,18 +1,30 @@
 import React from "react";
+import CardItem from "../../components/CardItem/CardItem";
+import './Potho.css'
 
 function Potho(props) {
 
   const { pothos } = props;
 
   return (
-    <div>
-      <div>
-        {pothos.map((potho) => (
-          <div className="review-container">
-            <h1>Name: {potho.name}</h1>
-            {/* <h1> Review: {review.fields.reviews}</h1> */}
-          </div>
-        ))}
+    <div className='pothos'>
+      <div className="pothos__container">
+        <div className="pothos__wrapper">
+          <ul className="pothos__items">
+            <div>
+              {pothos.map((potho) => (
+                <div>
+                  <CardItem
+                    // src={monstera.name}
+                    src={potho.img_url}
+                    label={potho.name}
+                    text={potho.name}
+                  />
+                </div>
+              ))}
+            </div>
+          </ul>
+        </div>
       </div>
     </div>
   );
