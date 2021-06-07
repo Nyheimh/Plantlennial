@@ -13,10 +13,9 @@ function Potho(props) {
           <ul className="pothos__items">
             <div>
               {pothos.map((potho) => (
-                <div>
+                <div className="pothos-order">
                   <CardItem
-                    // src={monstera.name}
-                    src={potho.img_url}
+                                      src={potho.img_url}
                     label={potho.name}
                     text={potho.name}
                   />

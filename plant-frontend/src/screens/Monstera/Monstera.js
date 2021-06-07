@@ -11,11 +11,11 @@ function Monstera(props) {
       <div className="monsteras__container">
         <div className="monsteras__wrapper">
           <ul className="monsteras__items">
-            <div>
+            <div className="monstera-line">
               {monsteras.map((monstera) => (
-                <div>
+                <div className="monstera-order">
                   <CardItem
-                    // src={monstera.name}
+                    
                     src={monstera.img_url}
                     label={monstera.name}
                     text={monstera.name}

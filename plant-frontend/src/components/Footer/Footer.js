@@ -28,12 +28,12 @@ function Footer() {
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
-            <h2>About Us</h2>
-            <Link to='/sign-up'>How it works</Link>
-            <Link to='/'>Testimonials</Link>
-            <Link to='/'>Careers</Link>
-            <Link to='/'>Investors</Link>
-            <Link to='/'>Terms of Service</Link>
+            {/* <h2>About Us</h2> */}
+            {/* <Link to='/sign-up'>How it works</Link> */}
+            {/* <Link to='/'>Testimonials</Link> */}
+            {/* <Link to='/'>Careers</Link> */}
+            {/* <Link to='/'>Investors</Link>
+            <Link to='/'>Terms of Service</Link> */}
           </div>
           {/* <div class='footer-link-items'>
             <h2>Contact Us</h2>
@@ -52,11 +52,11 @@ function Footer() {
             <Link to='/'>Influencer</Link>
           </div> */}
           <div class='footer-link-items'>
-            <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            {/* <h2>Social Media</h2> */}
+            {/* <Link to='/'>Instagram</Link> */}
+            {/* <Link to='/'>LinkedIn</Link> */}
+            {/* <Link to='/'>Youtube</Link> */}
+            {/* <Link to='/'>Twitter</Link> */}
           </div>
         </div>
       </div>

@@ -7,6 +7,10 @@ h1 {
   text-align: center;
 }
 
+.pothos-order {
+  display: inline-block;
+}
+
 .cards__container {
   display: flex;
   flex-flow: column;

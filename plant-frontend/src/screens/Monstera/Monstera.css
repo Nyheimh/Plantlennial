@@ -7,6 +7,20 @@ h1 {
   text-align: center;
 }
 
+.monstera-order {
+  /* display: inline-block;
+  padding: 10px;
+  align-content: center; */
+  display: grid;
+  grid-template-columns: 10fr 1fr 1fr;
+  grid-gap: 10px 2em;
+  
+}
+
+.monstera-line {
+  display: flex;
+  justify-content: space-between;
+}
 .monsteras__container {
   display: flex;
   flex-flow: column;
