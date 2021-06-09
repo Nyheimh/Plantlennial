@@ -26,7 +26,7 @@ Plant.create!(name: 'Lucky Bamboo', img_url: 'https://images.unsplash.com/photo-
   care: 'Easy', water: 'Potted in distilled water', sun: 'Bright indirect sunlight', toxicity: 'false')
 Plant.create!(name: 'Sansevieria Trifasciata', img_url: 'https://images.unsplash.com/photo-1616960974821-d2dcd9afec27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80', details: 'Sansevieria trifasciata black dragon species is native to the tropical area of Africa. As a snake plant, the black dragon, are on the top of the list of air purifying plants.',
   care: 'Medium', water: 'Every 9 - 14 days', sun: 'Low Light', toxicity: 'true')
-Plant.create!(name: 'Philodendrom Gloriosum', img_url: 'https://plantophiles.com/wp-content/uploads/2020/05/IMG_8235-1024x768.jpg.webp', details: '', care: '', water: '', sun: '', toxicity: '')
+Plant.create!(name: 'Philodendron Glorioso', img_url: 'https://plantophiles.com/wp-content/uploads/2020/05/IMG_8235-1024x768.jpg.webp', details: '', care: '', water: '', sun: '', toxicity: '')
 # Plant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
 # Plant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
 puts "#{Plant.count} plant created"
@@ -39,7 +39,7 @@ Monstera.create!(name: 'Monstera Albo', img_url: 'https://s3.amazonaws.com/plant
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
 Monstera.create!(name: 'Monstera Thai Constellation', img_url: 'https://cdn.shopify.com/s/files/1/0062/8480/4211/products/FC8CF20C-F2FD-4300-90C5-D13C183988A6.jpeg?v=1536953894', details: 'The Monstera deliciousa Thai Constellation is a variation of monstera deliciousa albo. The leaves have a white to yellow speckled variegation similar to a space constellation. As the thai constellation matures, the whole leaf begin to develop yellow or white colors. ',
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
-Monsteta.create!(name: 'Monstera Aurea ', img_url: 'https://i.pinimg.com/736x/21/ff/3d/21ff3d532f3872e7c00754f7ef7c6913.jpg', details: '', 
+Monstera.create!(name: 'Monstera Aurea ', img_url: 'https://i.pinimg.com/736x/21/ff/3d/21ff3d532f3872e7c00754f7ef7c6913.jpg', details: '', 
   care: '', water: '', sun: '', toxicity: 'true')
 # Monsteta.create!(name: 'Mini Monstera', img_url: 'https://images.pexels.com/photos/4350843/pexels-photo-4350843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', details: '', 
 #   care: '', water: '', sun: '', toxicity: 'true')
