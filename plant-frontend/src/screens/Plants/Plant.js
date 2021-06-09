@@ -8,10 +8,10 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 
 import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
+// import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
+// import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 // import plant from "../../assets/planting"
 
@@ -32,6 +32,11 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 10px",
     justifyContent: "space-between",
   },
+  h5: {
+    color: "#252e48",
+    fontSize: "18px",
+    lineHeight: " 24px",
+  },
 }));
 
 // root: {
@@ -49,15 +54,13 @@ function Plant({ plants }) {
     <div className="plants">
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Typography variant="h4" className={classes.blogTitle}></Typography>
-        {/* <div className="plant-hero-container">
-        <h1> Monstera </h1>
-      </div> */}
         <Grid container spacing={3}>
           {plants.map((plant) => (
             <Grid item xs={12} sm={6} md={4}>
               <Card className={classes.card}>
                 <CardActionArea>
-                  <CardMedia id="similar"
+                  <CardMedia
+                    id="similar"
                     className={classes.media}
                     image={plant.img_url}
                     title={plant.name}
@@ -65,25 +68,25 @@ function Plant({ plants }) {
 
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
-                      {plant.name}
+                      <div className="plant-title">{plant.name}</div>
                     </Typography>
                     <Typography
                       variant="body2"
                       color="textSecondary"
                       component="p"
                     >
-                      {plant.details}
+                      {/* {plant.details} */}
                     </Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions>
+                {/* <CardActions>
                   <Button size="small" color="primary">
                     Share
                   </Button>
                   <Button size="small" color="primary">
                     Learn More
                   </Button>
-                </CardActions>
+                </CardActions> */}
               </Card>
             </Grid>
           ))}
@@ -95,7 +98,7 @@ function Plant({ plants }) {
 
 export default Plant;
 
-{
+
   /* 41 - 60 <div className="plants__container">
   <div className="plants__wrapper">
     <ul className="plants__items">
@@ -114,4 +117,4 @@ export default Plant;
     </ul>
   </div>
 </div> */
-}
+

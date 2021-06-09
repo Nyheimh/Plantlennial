@@ -26,7 +26,7 @@ Plant.create!(name: 'Lucky Bamboo', img_url: 'https://images.unsplash.com/photo-
   care: 'Easy', water: 'Potted in distilled water', sun: 'Bright indirect sunlight', toxicity: 'false')
 Plant.create!(name: 'Sansevieria Trifasciata', img_url: 'https://images.unsplash.com/photo-1616960974821-d2dcd9afec27?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80', details: 'Sansevieria trifasciata black dragon species is native to the tropical area of Africa. As a snake plant, the black dragon, are on the top of the list of air purifying plants.',
   care: 'Medium', water: 'Every 9 - 14 days', sun: 'Low Light', toxicity: 'true')
-# Plant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
+Plant.create!(name: 'Philodendrom Gloriosum', img_url: 'https://plantophiles.com/wp-content/uploads/2020/05/IMG_8235-1024x768.jpg.webp', details: '', care: '', water: '', sun: '', toxicity: '')
 # Plant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
 # Plant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
 puts "#{Plant.count} plant created"
@@ -35,12 +35,12 @@ puts "#{Plant.count} plant created"
 
 @monstera = Monstera.create!(name: 'Monstera Deliciosa', img_url: 'https://images.unsplash.com/photo-1604512125224-b2ac1a18d295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80', details: 'The Monstera deliciousa (Split-leaf philodendron) is native to Central America. The monstera deliciousa are known as "monstrous" plants because of their growth, and the fruit that is beared in the wild is termed to be delicious. Though not indoors, they are able to produce edible fruit when grow outdoors or in their natural habitat. Monstera deliciousas loves to climb, ensuring there is support for the leaves and aerial roots to grab on are essential. As the monstera deliciousa grows and matures the leaves begin to split and the aerials become more prominent.',
   care: 'Easy', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
-Monstera.create!(name: 'Monstera Albo', img_url: 'https://images.unsplash.com/photo-1560415578-57d16c5df143?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bW9uc3RlcmElMjBhbGJvfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', details: 'The Monstera deliciousa Albo Variegata is a variegata monstera deliciousa where the leaves a white and green variegated look. This is extremely rare for the monstera to variegate which makes this plant highly sought after for the rarity since it is about 1/100,000.  This adds an extra element to care for the albo because if there are any issues with low light or too much chlorophyll is produced. At the same time, too much light can cause for the leaves to burn. ',
+Monstera.create!(name: 'Monstera Albo', img_url: 'https://s3.amazonaws.com/plants-map-prod/image/plant_pics/avatars/000/083/409/large/8FA1EB1A-E132-47CF-9CEE-43A506F4702D.jpeg?1544988917', details: 'The Monstera deliciousa Albo Variegata is a variegata monstera deliciousa where the leaves a white and green variegated look. This is extremely rare for the monstera to variegate which makes this plant highly sought after for the rarity since it is about 1/100,000.  This adds an extra element to care for the albo because if there are any issues with low light or too much chlorophyll is produced. At the same time, too much light can cause for the leaves to burn. ',
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
-Monstera.create!(name: 'Monstera Thai Constellation', img_url: 'https://images.unsplash.com/photo-1608575405484-b6dbdf5cbb46?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80', details: 'The Monstera deliciousa Thai Constellation is a variation of monstera deliciousa albo. The leaves have a white to yellow speckled variegation similar to a space constellation. As the thai constellation matures, the whole leaf begin to develop yellow or white colors. ',
+Monstera.create!(name: 'Monstera Thai Constellation', img_url: 'https://cdn.shopify.com/s/files/1/0062/8480/4211/products/FC8CF20C-F2FD-4300-90C5-D13C183988A6.jpeg?v=1536953894', details: 'The Monstera deliciousa Thai Constellation is a variation of monstera deliciousa albo. The leaves have a white to yellow speckled variegation similar to a space constellation. As the thai constellation matures, the whole leaf begin to develop yellow or white colors. ',
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
-# Monsteta.create!(name: 'Monstera Adansonii ', img_url: '', details: '', 
-#   care: '', water: '', sun: '', toxicity: 'true')
+Monsteta.create!(name: 'Monstera Aurea ', img_url: 'https://i.pinimg.com/736x/21/ff/3d/21ff3d532f3872e7c00754f7ef7c6913.jpg', details: '', 
+  care: '', water: '', sun: '', toxicity: 'true')
 # Monsteta.create!(name: 'Mini Monstera', img_url: 'https://images.pexels.com/photos/4350843/pexels-photo-4350843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', details: '', 
 #   care: '', water: '', sun: '', toxicity: 'true')
 # Monsteta.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: '')
@@ -63,9 +63,9 @@ puts "#{Potho.count} potho created"
 
 @snakeplant = Snakeplant.create!(name: 'Black Corral', img_url: 'https://images.unsplash.com/photo-1593482892540-73c9199d8949?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8c25ha2UlMjBwbGFudHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
   details: 'Sansevieria trifasciata black corral are on the top of the list of air purifying plants.', care: 'Easy', water: 'Every 9 - 14 days', sun: 'Medium sun to low light', toxicity: 'true')
-# Snakeplant.create!(name: 'Hahnii', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')
+Snakeplant.create!(name: 'Hahnii', img_url: 'https://plantcaretoday.com/wp-content/uploads/brid-nest-snake-plant-1200-630-FB-02282019-min.jpg', details: '', care: '', water: '', sun: '', toxicity: 'true')
 # Snakeplant.create!(name: 'Bantel’s Sensation', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')
-# Snakeplant.create!(name: 'Laurentii', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')
+Snakeplant.create!(name: 'Laurentii', img_url: 'https://cdn.shoplightspeed.com/shops/616617/files/29080624/1600x2048x2/sansevieria-trifasciata-laurentii-6-inch.jpg', details: '', care: '', water: '', sun: '', toxicity: 'true')
 # Snakeplant.create!(name: 'Black Dragon', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')
 # Snakeplant.create!(name: 'Bantels Sensation', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')
 # Snakeplant.create!(name: '', img_url: '', details: '', care: '', water: '', sun: '', toxicity: 'true')

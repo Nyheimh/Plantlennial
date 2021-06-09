@@ -1,33 +1,34 @@
-import React from 'react'
-import { Button } from '../Button/Button'
-import './Footer.css'
-import {Link} from "react-router-dom"
+import React from "react";
+import { Button } from "../Button/Button";
+import "./Footer.css";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <div className='footer-container'>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join the Plantllenial newsletter to receive our best plant information.
+    <div className="footer-container">
+      <section className="footer-subscription">
+        <p className="footer-subscription-heading">
+          Join the Plantlennial newsletter to receive our best plant
+          information.
         </p>
-        <p className='footer-subscription-text'>
+        <p className="footer-subscription-text">
           You can unsubscribe at any time.
         </p>
-        <div className='input-areas'>
+        <div className="input-areas">
           <form>
             <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
+              className="footer-input"
+              name="email"
+              type="email"
+              placeholder="Your Email"
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle="btn--outline">Subscribe</Button>
           </form>
         </div>
       </section>
-      <div class='footer-links'>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
+      <div class="footer-links">
+        <div className="footer-link-wrapper">
+          <div class="footer-link-items">
             {/* <h2>About Us</h2> */}
             {/* <Link to='/sign-up'>How it works</Link> */}
             {/* <Link to='/'>Testimonials</Link> */}
@@ -43,7 +44,7 @@ function Footer() {
             <Link to='/'>Sponsorships</Link>
           </div> */}
         </div>
-        <div className='footer-link-wrapper'>
+        <div className="footer-link-wrapper">
           {/* <div class='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
@@ -51,7 +52,7 @@ function Footer() {
             <Link to='/'>Agency</Link>
             <Link to='/'>Influencer</Link>
           </div> */}
-          <div class='footer-link-items'>
+          <div class="footer-link-items">
             {/* <h2>Social Media</h2> */}
             {/* <Link to='/'>Instagram</Link> */}
             {/* <Link to='/'>LinkedIn</Link> */}
@@ -60,16 +61,16 @@ function Footer() {
           </div>
         </div>
       </div>
-      <section class='social-media'>
-        <div class='social-media-wrap'>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              Plantllenial
-              <i class='fab fa-typo3' />
+      <section class="social-media">
+        <div class="social-media-wrap">
+          <div class="footer-logo">
+            <Link to="/" className="social-logo">
+              Plantlennial
+              <i class="fab fa-typo3" />
             </Link>
           </div>
-          <small class='website-rights'>Plantllenial © 2021</small>
-          <div class='social-icons'>
+          <small class="website-rights">Plantlennial © 2021</small>
+          <div class="social-icons">
             {/* <Link
               class='social-icon-link facebook'
               to='/'
@@ -95,20 +96,20 @@ function Footer() {
               <i class='fab fa-youtube' />
             </Link> */}
             <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='Twitter'
+              class="social-icon-link twitter"
+              to="/"
+              target="_blank"
+              aria-label="Twitter"
             >
-              <i class='fab fa-twitter' />
+              <i class="fab fa-twitter" />
             </Link>
             <Link
-              class='social-icon-link twitter'
-              to='/'
-              target='_blank'
-              aria-label='LinkedIn'
+              class="social-icon-link twitter"
+              to="/"
+              target="_blank"
+              aria-label="LinkedIn"
             >
-              <i class='fab fa-linkedin' />
+              <i class="fab fa-linkedin" />
             </Link>
           </div>
         </div>

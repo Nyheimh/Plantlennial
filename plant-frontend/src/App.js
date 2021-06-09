@@ -1,7 +1,6 @@
-// import logo from "./logo.svg";
 import "./App.css"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./screens/Home/Home";
+// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import Home from "./screens/Home/Home";
 import NavBar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 // import Plants from "./screens/Plants/Plant";

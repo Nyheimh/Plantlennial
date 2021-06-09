@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Button } from "../Button/Button";
+// import { Button } from "../Button/Button";
 import "./Navbar.css";
 
 export default function NavBar() {
@@ -29,7 +29,7 @@ export default function NavBar() {
       <nav className="navbar">
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-            Plantllenial
+            Plantlennial
             <i class="fab fa-typo3" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
@@ -51,13 +51,21 @@ export default function NavBar() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/monsteras" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/monsteras"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Monsteras
               </Link>
             </li>
 
             <li className="nav-item">
-              <Link to="/pothos" className="nav-links" onClick={closeMobileMenu}>
+              <Link
+                to="/pothos"
+                className="nav-links"
+                onClick={closeMobileMenu}
+              >
                 Pothos
               </Link>
             </li>
@@ -68,8 +76,6 @@ export default function NavBar() {
               </Link>
             </li> */}
 
-
-          
             {/* <li>
               <Link
                 to="/contactus"
