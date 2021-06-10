@@ -39,7 +39,7 @@ Monstera.create!(name: 'Monstera Albo', img_url: 'https://s3.amazonaws.com/plant
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
 Monstera.create!(name: 'Monstera Thai Constellation', img_url: 'https://cdn.shopify.com/s/files/1/0062/8480/4211/products/FC8CF20C-F2FD-4300-90C5-D13C183988A6.jpeg?v=1536953894', details: 'The Monstera deliciousa Thai Constellation is a variation of monstera deliciousa albo. The leaves have a white to yellow speckled variegation similar to a space constellation. As the thai constellation matures, the whole leaf begin to develop yellow or white colors. ',
   care: 'Tender Love & Care', water: 'Varies', sun: 'Indirect bright sunlight', toxicity: 'true')
-Monstera.create!(name: 'Monstera Aurea ', img_url: 'https://i.pinimg.com/736x/21/ff/3d/21ff3d532f3872e7c00754f7ef7c6913.jpg', details: '', 
+Monstera.create!(name: 'Monstera Aurea ', img_url: 'https://i.imgur.com/y109F6X.jpg', details: '', 
   care: '', water: '', sun: '', toxicity: 'true')
 # Monsteta.create!(name: 'Mini Monstera', img_url: 'https://images.pexels.com/photos/4350843/pexels-photo-4350843.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500', details: '', 
 #   care: '', water: '', sun: '', toxicity: 'true')
