@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Switch, Route, } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 
 // import PlantsDetail from "../screens/Plants/Plant";
 import { getAllPlants } from "../services/plants"
