@@ -20,6 +20,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(5),
     fontWeight: 800,
     paddingBottom: theme.spacing(10),
+    // margin: "0 auto"
   },
   card: {
     maxWidth: "100%",
@@ -64,8 +65,8 @@ function Plant({ plants }) {
                     className={classes.media}
                     image={plant.img_url}
                     title={plant.name}
+                    label={plant.name}
                   />
-
                   <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       <div className="plant-title">{plant.name}</div>

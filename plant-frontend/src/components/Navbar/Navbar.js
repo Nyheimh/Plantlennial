@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-// import { Button } from "../Button/Button";
+import { Button } from "../Button/Button";
 import "./Navbar.css";
 
 export default function NavBar() {
@@ -30,7 +30,7 @@ export default function NavBar() {
         <div className="navbar-container">
           <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
             Plantlennial
-            <i className="fab fa-typo3" />
+            <i className="fas fa-seedling" />
           </Link>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
