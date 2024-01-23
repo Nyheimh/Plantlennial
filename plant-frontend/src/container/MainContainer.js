@@ -1,17 +1,16 @@
+import React from "react";
 import { useState, useEffect } from "react";
-import { Switch, Route, } from "react-router-dom";
-// import { useHistory } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import Plant from "../screens/Plants/Plant";
+import Pothos from "../screens/Pothos/Potho";
+import Monsteras from "../screens/Monstera/Monstera";
+import Snakeplants from "../screens/Snakeplants/Snakeplant";
+import Home from "../screens/Home/Home";
 
-// import PlantsDetail from "../screens/Plants/Plant";
-import { getAllPlants } from "../services/plants"
-import { getAllPothos } from "../services/pothos"
-import { getAllMonsteras } from "../services/monsteras"
-import { getAllSnakeplants } from "../services/snakeplants"
-import Plant from "../screens/Plants/Plant"
-import Pothos from "../screens/Pothos/Potho"
-import Monsteras from "../screens/Monstera/Monstera"
-import Snakeplants from "../screens/Snakeplants/Snakeplant"
-import Home from '../screens/Home/Home'
+import { getAllPlants } from "../services/plants";
+import { getAllPothos } from "../services/pothos";
+import { getAllMonsteras } from "../services/monsteras";
+import { getAllSnakeplants } from "../services/snakeplants";
 
 function MainContainer() {
   const [plants, setPlants] = useState([]);
@@ -19,64 +18,34 @@ function MainContainer() {
   const [monsteras, setMonsteras] = useState([]);
   const [snakeplants, setSnakeplants] = useState([]);
 
+  const fetchData = async (fetchFunction, setterFunction) => {
+    try {
+      const data = await fetchFunction();
+      setterFunction(data);
+    } catch (error) {
+      console.error("Error fetching data: ", error);
+    }
+  };
 
   useEffect(() => {
-    const fetchPlants = async () => {
-      const plantData = await getAllPlants();
-      setPlants(plantData);
-    };
-    fetchPlants();
+    fetchData(getAllPlants, setPlants);
+    fetchData(getAllPothos, setPothos);
+    fetchData(getAllMonsteras, setMonsteras);
+    fetchData(getAllSnakeplants, setSnakeplants);
   }, []);
-
-  useEffect(() => {
-    const fetchPothos = async () => {
-      const pothoData = await getAllPothos();
-      setPothos(pothoData);
-    };
-    fetchPothos();
-  }, []);
-
-  useEffect(() => {
-    const fetchMonsteras = async () => {
-      const monsteraData = await getAllMonsteras();
-      setMonsteras(monsteraData);
-    };
-    fetchMonsteras();
-  }, []);
-
-  useEffect(() => {
-    const fetchSnakeplants = async () => {
-      const snakeplantData = await getAllSnakeplants();
-      setSnakeplants(snakeplantData);
-    };
-    fetchSnakeplants();
-  }, []);
-
 
   return (
-    <Switch>
-    <Route path="/plants">
-      <Plant plants={plants} />
-    </Route>
-    <Route path="/pothos">
-      <Pothos pothos={pothos} />
-    </Route>
-    <Route path="/monsteras">
-      <Monsteras monsteras={monsteras} />
-    </Route>
-    
-    <Route path="/snakeplants">
-      <Snakeplants
-        snakeplants={snakeplants}
+    <Routes>
+      <Route path="/plants" element={<Plant plants={plants} />} />
+      <Route path="/pothos" element={<Pothos pothos={pothos} />} />
+      <Route path="/monsteras" element={<Monsteras monsteras={monsteras} />} />
+      <Route
+        path="/snakeplants"
+        element={<Snakeplants snakeplants={snakeplants} />}
       />
-    </Route>
-      <Home />
-  </Switch>
-  )
+      <Route path="/" element={<Home />} />
+    </Routes>
+  );
 }
 
-export default MainContainer
-
-
-
-
+export default MainContainer;

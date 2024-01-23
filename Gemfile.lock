@@ -1701,7 +1701,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  aws-sdk
+  aws-sdk (~> 3)
   bootsnap (>= 1.4.4)
   byebug
   listen (~> 3.3)

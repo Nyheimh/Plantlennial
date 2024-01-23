@@ -18,7 +18,7 @@ gem 'puma', '~> 5.0'
 # gem 'bcrypt', '~> 3.1.7'
 
 # AWS SDK
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 3'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
