@@ -1,18 +1,15 @@
-import React from "react";
-// import CardItem from "../../components/CardItem/CardItem";
-import "./Monstera.css";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import Grid from "@material-ui/core/Grid";
-import Container from "@material-ui/core/Container";
-import CardActionArea from "@material-ui/core/CardActionArea";
-// import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-// import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
-import "./Monstera.css";
-// import MonsteraCardItem from "./MonsteraCardItem"
+import {
+  Card,
+  Container,
+  Grid,
+  CardMedia,
+  Typography,
+  Modal,
+  Backdrop,
+  Fade,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   blogsContainer: {
@@ -36,11 +33,41 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     lineHeight: " 24px",
   },
+  modal: {
+    display: "flex",
+    alignItems: "center",
+    alignContent: "center",
+    width: 500,
+  },
+  paper: {
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    justifyContent: "center",
+    alignContent: "center",
+    alignItems: "center",
+  },
+  monsteraCardTitle: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    padding: 10,
+  },
 }));
 
 function Monstera(props) {
   const { monsteras } = props;
   const classes = useStyles();
+  const [open, setOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="monsteras">
@@ -50,25 +77,37 @@ function Monstera(props) {
           {monsteras.map((monstera) => (
             <Grid item xs={12} sm={6} md={4}>
               <Card className={classes.card}>
-                <CardActionArea>
-                  <CardMedia
-                    id="similar"
-                    className={classes.media}
-                    image={monstera.img_url}
-                    label={monstera.name}
-                    text={monstera.name}
-                  />
-                  <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                      <div className="monstera-title">{monstera.name}</div>
-                    </Typography>
-                    <Typography
-                      variant="body2"
-                      color="textSecondary"
-                      component="p"
-                    ></Typography>
-                  </CardContent>
-                </CardActionArea>
+                <CardMedia
+                  id="similar"
+                  className={classes.media}
+                  image={monstera.img_url}
+                  label={monstera.name}
+                  text={monstera.name}
+                  onClick={handleOpenModal}
+                />
+                <Typography gutterBottom variant="h5" component="h2">
+                  <div className={classes.monsteraCardTitle}>
+                    {monstera.name}
+                  </div>
+                </Typography>
+                <Modal
+                  aria-labelledby="transition-modal-title"
+                  aria-describedby="transition-modal-description"
+                  className={classes.modal}
+                  open={open}
+                  onClose={handleCloseModal}
+                  closeAfterTransition
+                  BackdropComponent={Backdrop}
+                >
+                  <Fade in={open}>
+                    <div className={classes.paper}>
+                      <h2 id="transition-modal-title">{monstera.name}</h2>
+                      <p id="transition-modal-description">
+                        {monstera.details}
+                      </p>
+                    </div>
+                  </Fade>
+                </Modal>
               </Card>
             </Grid>
           ))}
@@ -78,31 +117,3 @@ function Monstera(props) {
   );
 }
 export default Monstera;
-
-// later use
-// function Monstera(props) {
-//   const { monsteras } = props;
-
-//   return (
-//     <div className='monsteras'>
-//       <div className="monsteras__container">
-//         <div className="monsteras__wrapper">
-//           <ul className="monsteras__items">
-//             <div className="monstera-line">
-//               {monsteras.map((monstera) => (
-//                 <div className="monstera-order">
-//                   <CardItem
-
-//                     src={monstera.img_url}
-//                     label={monstera.name}
-//                     text={monstera.name}
-//                   />
-//                 </div>
-//               ))}
-//             </div>
-//           </ul>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
