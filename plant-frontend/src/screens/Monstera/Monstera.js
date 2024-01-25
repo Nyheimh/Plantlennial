@@ -14,20 +14,10 @@ import {
 import useModal from "../../hooks/useModal";
 
 function Monstera({ monsteras }) {
-  // const { monsteras } = props;
   const classes = useStyles();
   const { open, handleOpenModal, handleCloseModal } = useModal();
-  // const [open, setOpen] = useState(false);
   const [searchMonstera, setSearchMonstera] = useState("");
   const [filteredMonsteras, setFilteredMonsteras] = useState(monsteras);
-
-  // const handleOpenModal = () => {
-  //   setOpen(true);
-  // };
-
-  // const handleCloseModal = () => {
-  //   setOpen(false);
-  // };
 
   const handleSearchChange = (e) => {
     const searchTerm = e.target.value.toLowerCase();
