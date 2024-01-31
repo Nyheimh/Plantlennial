@@ -1,6 +1,11 @@
-import api from './api-helper'
+import api from "./api-helper";
 
 export const getAllPothos = async () => {
-  const resp = await api.get('/pothos');
-  return resp.data;
-}
+  try {
+    const resp = await api.get("/pothos");
+    return resp.data;
+  } catch (error) {
+    console.error("Error fetching pothos data:", error);
+    return null;
+  }
+};

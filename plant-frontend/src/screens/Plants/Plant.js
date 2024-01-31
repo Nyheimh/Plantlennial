@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./Plant.css";
+import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import {
   Box,
@@ -18,17 +17,24 @@ function Plant({ plants }) {
   const classes = useStyles();
   const { open, handleOpenModal, handleCloseModal } = useModal();
   const [searchPlant, setSearchPlant] = useState("");
-  const [filteredPlants, setFilteredPlants] = useState(plants);
+  const [filteredPlants, setFilteredPlants] = useState([]);
+
+  useEffect(() => {
+    if (!plants) return;
+    setFilteredPlants(plants);
+  }, [plants]);
 
   const handleSearchChange = (e) => {
     const searchTerm = e.target.value.toLowerCase();
     setSearchPlant(searchTerm);
 
-    const filteredPlants = plants.filter((plant) =>
-      plant.name.toLowerCase().includes(searchTerm)
+    if (!plants) return;
+    const filtered = plants.filter((plant) =>
+      plant.common_name.toLowerCase().includes(searchTerm)
     );
-    setFilteredPlants(filteredPlants);
+    setFilteredPlants(filtered);
   };
+  console.log("Debugged:", plants);
 
   return (
     <Box>
@@ -45,18 +51,21 @@ function Plant({ plants }) {
         <Typography variant="h4" className={classes.blogTitle}></Typography>
         <Grid container spacing={3}>
           {filteredPlants.map((plant) => (
-            <Grid item xs={12} sm={6} md={4} key={plant.name}>
+            <Grid item xs={12} sm={6} md={4} key={plant.id}>
               <Card className={classes.plantCard}>
                 <CardMedia
                   id="similar"
                   className={classes.plantMedia}
-                  image={plant.img_url}
-                  title={plant.name}
-                  label={plant.name}
+                  image={
+                    plant.default_image ? plant.default_image.medium_url : ""
+                  }
+                  title={plant.common_name}
+                  label={plant.common_name}
                   onClick={handleOpenModal}
+                  alt={plant.common_name}
                 />
                 <Typography gutterBottom variant="h5" component="h2">
-                  <div className={classes.plantName}>{plant.name}</div>
+                  <div className={classes.plantName}>{plant.common_name}</div>
                 </Typography>
                 <Modal
                   className={classes.plantCardModal}
@@ -70,7 +79,7 @@ function Plant({ plants }) {
                 >
                   <Fade in={open}>
                     <div className={classes.plantModalPaper}>
-                      <h2>{plant.name}</h2>
+                      <h2>{plant.common_name}</h2>
                       <p>{plant.details}</p>
                     </div>
                   </Fade>
@@ -95,7 +104,12 @@ const useStyles = makeStyles((theme) => ({
   plantCard: {
     maxWidth: "100%",
   },
-  plantName: {},
+  plantName: {
+    display: "flex",
+    alignContent: "center",
+    justifyContent: "center",
+    padding: 10,
+  },
   plantMedia: {
     height: 240,
   },
@@ -133,7 +147,8 @@ const useStyles = makeStyles((theme) => ({
   plantCardModal: {
     display: "flex",
     alignItems: "center",
-    marginLeft: 500,
+    marginLeft: "auto",
+    marginRight: "auto",
     width: 500,
   },
   plantModalPaper: {

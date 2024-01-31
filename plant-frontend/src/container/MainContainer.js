@@ -7,7 +7,7 @@ import Monsteras from "../screens/Monstera/Monstera";
 import Snakeplants from "../screens/Snakeplants/Snakeplant";
 import Home from "../screens/Home/Home";
 
-import { getAllPlants } from "../services/plants";
+import { getPlantsAPI } from "../services/plants";
 import { getAllPothos } from "../services/pothos";
 import { getAllMonsteras } from "../services/monsteras";
 import { getAllSnakeplants } from "../services/snakeplants";
@@ -28,7 +28,7 @@ function MainContainer() {
   };
 
   useEffect(() => {
-    fetchData(getAllPlants, setPlants);
+    fetchData(getPlantsAPI, setPlants);
     fetchData(getAllPothos, setPothos);
     fetchData(getAllMonsteras, setMonsteras);
     fetchData(getAllSnakeplants, setSnakeplants);

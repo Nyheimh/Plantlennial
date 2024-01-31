@@ -1,6 +1,11 @@
-import api from './api-helper'
+import api from "./api-helper";
 
 export const getAllMonsteras = async () => {
-  const resp = await api.get('/monsteras');
-  return resp.data;
-}
+  try {
+    const resp = await api.get("/monsteras");
+    return resp.data;
+  } catch (error) {
+    console.error("Error fetching rails monstera data:", error);
+    return null;
+  }
+};
