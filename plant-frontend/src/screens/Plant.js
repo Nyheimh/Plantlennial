@@ -7,15 +7,11 @@ import {
   Grid,
   CardMedia,
   Typography,
-  Modal,
-  Backdrop,
-  Fade,
 } from "@material-ui/core";
-import useModal from "../../hooks/useModal";
 
 function Plant({ plants }) {
   const classes = useStyles();
-  const { open, handleOpenModal, handleCloseModal } = useModal();
+
   const [searchPlant, setSearchPlant] = useState("");
   const [filteredPlants, setFilteredPlants] = useState([]);
 
@@ -34,7 +30,6 @@ function Plant({ plants }) {
     );
     setFilteredPlants(filtered);
   };
-  console.log("Debugged:", plants);
 
   return (
     <Box>
@@ -61,29 +56,11 @@ function Plant({ plants }) {
                   }
                   title={plant.common_name}
                   label={plant.common_name}
-                  onClick={handleOpenModal}
                   alt={plant.common_name}
                 />
                 <Typography gutterBottom variant="h5" component="h2">
                   <div className={classes.plantName}>{plant.common_name}</div>
                 </Typography>
-                <Modal
-                  className={classes.plantCardModal}
-                  open={open}
-                  onClose={handleCloseModal}
-                  closeAfterTransition
-                  BackdropComponent={Backdrop}
-                  BackdropProps={{
-                    timeout: 500,
-                  }}
-                >
-                  <Fade in={open}>
-                    <div className={classes.plantModalPaper}>
-                      <h2>{plant.common_name}</h2>
-                      <p>{plant.details}</p>
-                    </div>
-                  </Fade>
-                </Modal>
               </Card>
             </Grid>
           ))}
@@ -143,20 +120,5 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     display: "flex",
     justifyContent: "center",
-  },
-  plantCardModal: {
-    display: "flex",
-    alignItems: "center",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: 500,
-  },
-  plantModalPaper: {
-    backgroundColor: theme.palette.background.paper,
-    border: "2px solid #000",
-    boxShadow: theme.shadows[5],
-    padding: theme.spacing(2, 4, 3),
-    justifyContent: "center",
-    alignContent: "center",
   },
 }));
