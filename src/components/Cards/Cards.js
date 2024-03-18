@@ -3,7 +3,7 @@ import CardItem from "../CardItem/CardItem";
 import "./Cards.css";
 import monsteraalbo from "../../assets/monstera.jpg";
 import goldenpothos from "../../assets/pothos.jpeg";
-import snakeplant from "../../assets/snakeplant.jpeg";
+import snakeplant from "../../assets/trees.avif";
 
 function Cards() {
   return (
@@ -29,23 +29,10 @@ function Cards() {
           <ul className="cards__items">
             <CardItem
               src={snakeplant}
-              text="Set your eyes on some of the beautiful air purifiers. "
-              label="Snake Plant"
-              path="/snakeplants"
+              text="Beautiful trees, our sense of oxygen."
+              label="Trees"
+              path="/plants"
             />
-            {/* <CardItem
-              src={image4}
-              text='Experience Football on Top of the Himilayan Mountains'
-              label='Adventure'
-              path='/products'
-            /> */}
-
-            {/* <CardItem
-              src={image8}
-              text='Ride through the Sahara Desert on a guided camel tour'
-              label='Adrenaline'
-              path='/sign-up'
-            /> */}
           </ul>
         </div>
       </div>

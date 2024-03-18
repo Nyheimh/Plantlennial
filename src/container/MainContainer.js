@@ -5,16 +5,13 @@ import Plant from "../screens/Plant";
 import Pothos from "../screens/Potho";
 import Monsteras from "../screens/Monstera";
 import { MonsteraData } from "./monsteraData";
-import Snakeplants from "../screens/Snakeplant";
 import Home from "../screens/Home/Home";
 
 import { getPlantsAPI } from "../services/plants";
-import { getAllSnakeplants } from "../services/snakeplants";
 import { PothoData } from "./pothosData";
 
 function MainContainer() {
   const [plants, setPlants] = useState([]);
-  const [snakeplants, setSnakeplants] = useState([]);
 
   const fetchData = async (fetchFunction, setterFunction) => {
     try {
@@ -27,7 +24,6 @@ function MainContainer() {
 
   useEffect(() => {
     fetchData(getPlantsAPI, setPlants);
-    fetchData(getAllSnakeplants, setSnakeplants);
   }, []);
 
   return (
@@ -38,10 +34,7 @@ function MainContainer() {
         path="/monsteras"
         element={<Monsteras monsteras={MonsteraData} />}
       />
-      <Route
-        path="/snakeplants"
-        element={<Snakeplants snakeplants={snakeplants} />}
-      />
+
       <Route path="/" element={<Home />} />
     </Routes>
   );

@@ -28,6 +28,7 @@ function Plant({ plants }) {
     const filtered = plants.filter((plant) =>
       plant.common_name.toLowerCase().includes(searchTerm)
     );
+
     setFilteredPlants(filtered);
   };
 
@@ -37,7 +38,7 @@ function Plant({ plants }) {
         <Container className={classes.plantSearchBarContainer}>
           <input
             type="text"
-            placeholder="Search Plants"
+            placeholder="Search Trees"
             value={searchPlant}
             onChange={handleSearchChange}
             className={classes.plantSearchBar}

@@ -7,16 +7,10 @@ import {
   Grid,
   CardMedia,
   Typography,
-  Modal,
-  Backdrop,
-  Fade,
 } from "@material-ui/core";
-import useModal from "../hooks/useModal";
-import { monsteraData } from "../container/monsteraData";
 
 function Monstera({ monsteras }) {
   const classes = useStyles();
-  const { open, handleOpenModal, handleCloseModal } = useModal();
   const [searchMonstera, setSearchMonstera] = useState("");
   const [filteredMonsteras, setFilteredMonsteras] = useState([]);
 
@@ -27,14 +21,12 @@ function Monstera({ monsteras }) {
   }, [monsteras]);
 
   useEffect(() => {
-    // if (!monsteras) return;
     setFilteredMonsteras(monsteras);
   }, [monsteras]);
   const handleSearchChange = (e) => {
     const searchTerm = e.target.value.toLowerCase();
     setSearchMonstera(searchTerm);
 
-    // if (!monsteras) return;
     const filteredMonsteras = monsteras.filter((monstera) =>
       monstera.name.toLowerCase().includes(searchTerm)
     );
@@ -63,30 +55,12 @@ function Monstera({ monsteras }) {
                   image={monstera.img_url}
                   label={monstera.name}
                   text={monstera.name}
-                  onClick={handleOpenModal}
                 />
                 <Typography gutterBottom variant="h5" component="h2">
                   <div className={classes.monsteraCardTitle}>
                     {monstera.name}
                   </div>
                 </Typography>
-                <Modal
-                  className={classes.monsteraCardModal}
-                  open={open}
-                  onClose={handleCloseModal}
-                  closeAfterTransition
-                  BackdropComponent={Backdrop}
-                  BackdropProps={{
-                    timeout: 500,
-                  }}
-                >
-                  <Fade in={open}>
-                    <div className={classes.monsteraModalPaper}>
-                      <h2>{monstera.name}</h2>
-                      <p>{monstera.details}</p>
-                    </div>
-                  </Fade>
-                </Modal>
               </Card>
             </Grid>
           ))}
