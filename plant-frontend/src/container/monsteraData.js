@@ -2,7 +2,7 @@ export const MonsteraData = [
   {
     name: "Monstera Deliciosa",
     img_url:
-      "https://images.unsplash.com/photo-1604512125224-b2ac1a18d295?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80",
+      "https://images.unsplash.com/photo-1617173944883-6ffbd35d584d?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     details:
       'The Monstera deliciousa (Split-leaf philodendron) is native to Central America. The monstera deliciousa is known as "monstrous" plants because of their growth, and the fruit that is borne in the wild is termed to be delicious. Though not indoors, they are able to produce edible fruit when grown outdoors or in their natural habitat. Monstera deliciousas love to climb, ensuring there is support for the leaves and aerial roots to grab on are essential. As the monstera deliciousa grows and matures the leaves begin to split and the aerials become more prominent.',
     care: "https://growurban.uk/blogs/news/care-guide-monstera-deliciosa",
@@ -10,7 +10,7 @@ export const MonsteraData = [
     sun: "Indirect bright sunlight",
   },
   {
-    name: "Monstera deliciosa 'Albo Borsigiana'",
+    name: "Monstera Albo Borsigiana",
     img_url:
       "https://www.thespruce.com/thmb/mUMgwCbV2xURmyHzDo8fnx8bYIs=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/pexels-huy-phan-8284916-6976610b4d754a33a4eaafb22b69c947.jpg",
     // care: https://www.thespruce.com/monstera-albo-growing-guide-5323786
@@ -37,7 +37,7 @@ export const MonsteraData = [
       "https://images.unsplash.com/photo-1609841637218-cc39adabce17?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "Rhaphidophora tetrasperma",
+    name: "Mini Monstera",
     img_url:
       "https://images.pexels.com/photos/4350843/pexels-photo-4350843.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
   },

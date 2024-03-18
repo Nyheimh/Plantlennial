@@ -9,12 +9,11 @@ import Snakeplants from "../screens/Snakeplant";
 import Home from "../screens/Home/Home";
 
 import { getPlantsAPI } from "../services/plants";
-import { getAllPothos } from "../services/pothos";
 import { getAllSnakeplants } from "../services/snakeplants";
+import { PothoData } from "./pothosData";
 
 function MainContainer() {
   const [plants, setPlants] = useState([]);
-  const [pothos, setPothos] = useState([]);
   const [snakeplants, setSnakeplants] = useState([]);
 
   const fetchData = async (fetchFunction, setterFunction) => {
@@ -28,14 +27,13 @@ function MainContainer() {
 
   useEffect(() => {
     fetchData(getPlantsAPI, setPlants);
-    fetchData(getAllPothos, setPothos);
     fetchData(getAllSnakeplants, setSnakeplants);
   }, []);
 
   return (
     <Routes>
       <Route path="/plants" element={<Plant plants={plants} />} />
-      <Route path="/pothos" element={<Pothos pothos={pothos} />} />
+      <Route path="/pothos" element={<Pothos pothos={PothoData} />} />
       <Route
         path="/monsteras"
         element={<Monsteras monsteras={MonsteraData} />}

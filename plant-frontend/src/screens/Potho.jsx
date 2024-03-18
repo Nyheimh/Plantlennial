@@ -9,57 +9,55 @@ import {
   Typography,
 } from "@material-ui/core";
 
-function Monstera({ monsteras }) {
+function Potho({ pothos }) {
   const classes = useStyles();
-  const [searchMonstera, setSearchMonstera] = useState("");
-  const [filteredMonsteras, setFilteredMonsteras] = useState([]);
+  const [searchPotho, setSearchPotho] = useState("");
+  const [filteredPothos, setFilteredPothos] = useState([]);
 
   useEffect(() => {
-    if (Array.isArray(monsteras)) {
-      setFilteredMonsteras(monsteras);
+    if (Array.isArray(pothos)) {
+      setFilteredPothos(pothos);
     }
-  }, [monsteras]);
+  }, [pothos]);
 
   useEffect(() => {
-    setFilteredMonsteras(monsteras);
-  }, [monsteras]);
+    setFilteredPothos(pothos);
+  }, [pothos]);
   const handleSearchChange = (e) => {
     const searchTerm = e.target.value.toLowerCase();
-    setSearchMonstera(searchTerm);
+    setSearchPotho(searchTerm);
 
-    const filteredMonsteras = monsteras.filter((monstera) =>
-      monstera.name.toLowerCase().includes(searchTerm)
+    const filteredPothos = pothos.filter((potho) =>
+      potho.name.toLowerCase().includes(searchTerm)
     );
-    setFilteredMonsteras(filteredMonsteras);
+    setFilteredPothos(filteredPothos);
   };
 
   return (
     <Box>
-      <Container className={classes.monsteraSearchBarContainer}>
+      <Container className={classes.pothoSearchBarContainer}>
         <input
           type="text"
-          placeholder="Search Monsteras"
-          value={searchMonstera}
+          placeholder="Search Pothos"
+          value={searchPotho}
           onChange={handleSearchChange}
-          className={classes.monsteraSearchBar}
+          className={classes.pothoSearchBar}
         />
       </Container>
       <Container maxWidth="lg" className={classes.blogsContainer}>
         <Grid container spacing={3}>
-          {filteredMonsteras.map((monstera) => (
-            <Grid item xs={12} sm={6} md={4} key={monstera.name}>
-              <Card className={classes.monsteraCard}>
+          {filteredPothos.map((potho) => (
+            <Grid item xs={12} sm={6} md={4} key={potho.name}>
+              <Card className={classes.pothoCard}>
                 <CardMedia
                   id="similar"
-                  className={classes.monsteraCardMedia}
-                  image={monstera.img_url}
-                  label={monstera.name}
-                  text={monstera.name}
+                  className={classes.pothoCardMedia}
+                  image={potho.img_url}
+                  label={potho.name}
+                  text={potho.name}
                 />
                 <Typography gutterBottom variant="h5" component="h2">
-                  <div className={classes.monsteraCardTitle}>
-                    {monstera.name}
-                  </div>
+                  <div className={classes.pothoCardTitle}>{potho.name}</div>
                 </Typography>
               </Card>
             </Grid>
@@ -69,7 +67,7 @@ function Monstera({ monsteras }) {
     </Box>
   );
 }
-export default Monstera;
+export default Potho;
 
 const useStyles = makeStyles((theme) => ({
   blogsContainer: {
@@ -77,10 +75,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 800,
     paddingBottom: theme.spacing(10),
   },
-  monsteraCard: {
+  pothoCard: {
     maxWidth: "100%",
   },
-  monsteraCardMedia: {
+  pothoCardMedia: {
     height: 240,
   },
   cardActions: {
@@ -93,13 +91,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "18px",
     lineHeight: " 24px",
   },
-  monsteraCardModal: {
+  pothoCardModal: {
     display: "flex",
     alignItems: "center",
     marginLeft: 500,
     width: 500,
   },
-  monsteraModalPaper: {
+  pothoModalPaper: {
     backgroundColor: theme.palette.background.paper,
     border: "2px solid #000",
     boxShadow: theme.shadows[5],
@@ -107,13 +105,13 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignContent: "center",
   },
-  monsteraCardTitle: {
+  pothoCardTitle: {
     display: "flex",
     alignContent: "center",
     justifyContent: "center",
     padding: 10,
   },
-  monsteraSearchBar: {
+  pothoSearchBar: {
     border: "1px solid green",
     borderRadius: 40,
     margin: 20,
@@ -122,7 +120,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontSize: 15,
   },
-  monsteraSearchBarContainer: {
+  pothoSearchBarContainer: {
     alignContent: "center",
     alignItems: "center",
     display: "flex",
