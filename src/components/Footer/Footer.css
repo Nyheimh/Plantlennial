@@ -7,7 +7,7 @@
   align-items: center;
   margin: 0 auto;
   margin-top: 30px;
-  /* position: sticky; */
+  position: sticky;
 }
 
 .footer-subscription {
@@ -22,8 +22,8 @@
 }
 
 .footer-subscription > p {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
 .footer-subscription-heading {
